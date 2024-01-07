@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="root" prefHeight="799.0" prefWidth="1248.0" style="-fx-background-color: #957DDC;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.apparelHub.Controller.OutputManageController">
+   <children>
+      <JFXButton buttonType="RAISED" layoutX="14.0" layoutY="745.0" onAction="#btnBackOnAction" prefHeight="40.0" prefWidth="142.0" style="-fx-background-color: blue;" text="Back" textFill="#f2ebeb">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font>
+      </JFXButton>
+      <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="14.0" layoutY="745.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/icons8-back-64.png" />
+         </image>
+      </ImageView>
+      <ComboBox fx:id="empIdCmb" layoutX="54.0" layoutY="120.0" onAction="#empIdCmbOnAction" prefHeight="35.0" prefWidth="172.0" />
+      <Label layoutX="416.0" layoutY="8.0" text="Output details manage form">
+         <font>
+            <Font name="System Bold" size="28.0" />
+         </font>
+      </Label>
+      <Label layoutX="54.0" layoutY="89.0" prefHeight="19.0" prefWidth="163.0" text="Emplyee Id :">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="productIdcmb" layoutX="317.0" layoutY="120.0" onAction="#productIdcmbOnAction" prefHeight="35.0" prefWidth="172.0" />
+      <Label layoutX="317.0" layoutY="89.0" prefHeight="19.0" prefWidth="134.0" text="Product Id :">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="dateLbl" layoutX="600.0" layoutY="120.0" prefHeight="35.0" prefWidth="255.0" textFill="RED">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font></Label>
+      <Label fx:id="timeLbl" layoutX="898.0" layoutY="120.0" prefHeight="35.0" prefWidth="255.0" textFill="RED">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font></Label>
+      <Label fx:id="employeeNameLbl" layoutX="54.0" layoutY="233.0" prefHeight="35.0" prefWidth="172.0" textFill="RED">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font></Label>
+      <Label layoutX="54.0" layoutY="209.0" prefHeight="19.0" prefWidth="189.0" text="Emplyee Name : ">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="productNameLbl" layoutX="321.0" layoutY="234.0" prefHeight="35.0" prefWidth="172.0" textFill="RED">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font></Label>
+      <Label layoutX="321.0" layoutY="210.0" prefHeight="19.0" prefWidth="178.0" text="Product Name : ">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="qtyOnHandLbl" layoutX="603.0" layoutY="235.0" prefHeight="35.0" prefWidth="172.0" textFill="RED">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font></Label>
+      <Label layoutX="603.0" layoutY="211.0" prefHeight="19.0" prefWidth="246.0" text="Availble product Quantity :">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <TextField fx:id="qtyTxt" layoutX="898.0" layoutY="233.0" prefHeight="35.0" prefWidth="172.0" />
+      <Label layoutX="898.0" layoutY="201.0" prefHeight="16.0" prefWidth="134.0" text="Qty :">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Button layoutX="908.0" layoutY="716.0" mnemonicParsing="false" onAction="#addOutputDetailBtnClick" prefHeight="35.0" prefWidth="163.0" style="-fx-background-color: blue;" text="Add output details" textFill="WHITE" />
+      <Label layoutX="603.0" layoutY="92.0" prefHeight="19.0" prefWidth="134.0" text="Date :">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="898.0" layoutY="101.0" prefHeight="19.0" prefWidth="134.0" text="Time :">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <TextField fx:id="outputIsTxt" layoutX="54.0" layoutY="328.0" prefHeight="35.0" prefWidth="172.0" />
+      <Label layoutX="54.0" layoutY="294.0" prefHeight="19.0" prefWidth="189.0" text="Output Id :">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tblOutput" layoutX="70.0" layoutY="483.0" prefHeight="200.0" prefWidth="1000.0">
+        <columns>
+          <TableColumn fx:id="colId" prefWidth="305.0" text="Stock Id" />
+          <TableColumn fx:id="colName" prefWidth="243.0" text="Stock Name" />
+            <TableColumn fx:id="colQty" prefWidth="251.0" text="Used Stock Qty" />
+            <TableColumn fx:id="colAction" prefWidth="199.0" text="Action" />
+        </columns>
+      </TableView>
+      <ComboBox fx:id="stockIdCmb" layoutX="321.0" layoutY="326.0" onAction="#stockIdCmbOnAction" prefHeight="35.0" prefWidth="172.0" />
+      <Label layoutX="321.0" layoutY="295.0" prefHeight="19.0" prefWidth="163.0" text="Stock Id :">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="stcokNameLbl" layoutX="603.0" layoutY="329.0" prefHeight="35.0" prefWidth="172.0" textFill="RED">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="603.0" layoutY="296.0" prefHeight="19.0" prefWidth="237.0" text="Stock Name :">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="898.0" layoutY="292.0" prefHeight="19.0" prefWidth="237.0" text="Used Stock Qty :">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <TextField fx:id="usedStockQty" layoutX="898.0" layoutY="329.0" prefHeight="35.0" prefWidth="172.0" />
+      <Button layoutX="903.0" layoutY="417.0" mnemonicParsing="false" onAction="#addUsedStocksBtnOnCLick" prefHeight="35.0" prefWidth="163.0" style="-fx-background-color: blue;" text="Add Used Stocks" textFill="WHITE" />
+   </children>
+</AnchorPane>

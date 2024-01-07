@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="root" prefHeight="799.0" prefWidth="1248.0" style="-fx-background-color: #957DDC;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.apparelHub.Controller.EmployeeSalaryFormController">
+   <children>
+      <JFXButton buttonType="RAISED" layoutX="50.0" layoutY="33.0" onAction="#btnBackOnAction" prefHeight="40.0" prefWidth="142.0" style="-fx-background-color: blue;" text="Back" textFill="#f2ebeb">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font>
+      </JFXButton>
+      <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="50.0" layoutY="33.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/icons8-back-64.png" />
+         </image>
+      </ImageView>
+      <ComboBox fx:id="cmbEmpSalary" layoutX="236.0" layoutY="128.0" onAction="#empSalaryCmbOnAction" prefHeight="30.0" prefWidth="190.0" />
+      <Label layoutX="236.0" layoutY="87.0" text="Emp id:">
+         <font>
+            <Font name="System Bold" size="19.0" />
+         </font>
+      </Label>
+      <Label layoutX="790.0" layoutY="91.0" text="Name:">
+         <font>
+            <Font name="System Bold" size="19.0" />
+         </font>
+      </Label>
+      <Label layoutX="236.0" layoutY="235.0" prefHeight="24.0" prefWidth="103.0" text="Amount:">
+         <font>
+            <Font name="System Bold" size="19.0" />
+         </font>
+      </Label>
+      <JFXButton buttonType="RAISED" layoutX="902.0" layoutY="425.0" onAction="#btnEmpSalarySaveOnAction" style="-fx-background-color: green;" text="Save" textFill="#ebe2e2">
+         <font>
+            <Font name="System Bold" size="19.0" />
+         </font>
+         <effect>
+            <Shadow />
+         </effect>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="770.0" layoutY="425.0" onAction="#btnEmpSalaryUpdateOnAction" prefHeight="36.0" prefWidth="105.0" style="-fx-background-color: yellow;" text="Update" textFill="#2c2a2a">
+         <font>
+            <Font name="System Bold" size="19.0" />
+         </font>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="658.0" layoutY="425.0" onAction="#btnClearOnAction" prefHeight="36.0" prefWidth="85.0" style="-fx-background-color: blue;" text="Clear" textFill="#eee0e0">
+         <font>
+            <Font name="System Bold" size="19.0" />
+         </font>
+      </JFXButton>
+      <JFXButton layoutX="539.0" layoutY="425.0" onAction="#btnEmpSalaryDeleteOnAction" style="-fx-background-color: red;" text="Delete" textFill="#eeeaea">
+         <font>
+            <Font name="System Bold" size="19.0" />
+         </font>
+      </JFXButton>
+      <Label fx:id="empDateLbl" layoutX="805.0" layoutY="247.0" text="Date:">
+         <font>
+            <Font name="System Bold" size="19.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tblEmpSalary" layoutX="221.0" layoutY="524.0" prefHeight="200.0" prefWidth="782.0">
+        <columns>
+          <TableColumn fx:id="colEmpId" prefWidth="75.0" text="Emp id" />
+          <TableColumn fx:id="colEmpName" prefWidth="239.0" text="Name" />
+            <TableColumn fx:id="colEmpAmount" prefWidth="256.0" text="Amount" />
+            <TableColumn fx:id="colEmpDate" prefWidth="211.0" text="Date" />
+        </columns>
+      </TableView>
+      <DatePicker fx:id="txtDate" layoutX="790.0" layoutY="283.0" prefHeight="30.0" prefWidth="211.0" />
+      <TextField fx:id="txtSalaryAmount" layoutX="236.0" layoutY="286.0" prefHeight="30.0" prefWidth="190.0" />
+      <Label fx:id="empNameLbl" layoutX="783.0" layoutY="128.0" prefHeight="30.0" prefWidth="184.0">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

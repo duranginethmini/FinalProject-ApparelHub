@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="root" opacity="0.93" prefHeight="799.0" prefWidth="1248.0" style="-fx-background-color: #957DDC;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.apparelHub.Controller.ProductFormController">
+   <children>
+      <ImageView fitHeight="333.0" fitWidth="356.0" layoutX="863.0" layoutY="417.0" opacity="0.74" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/fashion.png" />
+         </image>
+      </ImageView>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#957ddc" height="772.0" layoutX="24.0" layoutY="11.0" opacity="0.61" stroke="WHITE" strokeType="INSIDE" width="200.0">
+         <effect>
+            <InnerShadow />
+         </effect>
+      </Rectangle>
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="24.0" layoutY="24.0" opacity="0.76" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/logoimage.png" />
+         </image>
+      </ImageView>
+      <JFXButton buttonType="RAISED" layoutX="35.0" layoutY="140.0" onAction="#btnDashBoardOnAction" prefHeight="43.0" prefWidth="179.0" text="     Dashboard">
+         <font>
+            <Font name="System Bold" size="19.0" />
+         </font>
+      </JFXButton>
+      <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="35.0" layoutY="142.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/dashboard.png" />
+         </image>
+      </ImageView>
+      <JFXButton buttonType="RAISED" layoutX="35.0" layoutY="197.0" onAction="#btnOrderOnAction" prefHeight="43.0" prefWidth="179.0" text="Orders">
+         <font>
+            <Font name="System Bold" size="19.0" />
+         </font>
+      </JFXButton>
+      <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="35.0" layoutY="199.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/shopping-bag.png" />
+         </image>
+      </ImageView>
+      <JFXButton buttonType="RAISED" layoutX="35.0" layoutY="257.0" onAction="#btnCustomerOnAction" prefHeight="43.0" prefWidth="179.0" text="    Customers">
+         <font>
+            <Font name="System Bold" size="19.0" />
+         </font>
+      </JFXButton>
+      <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="35.0" layoutY="259.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/customer.png" />
+         </image>
+      </ImageView>
+      <JFXButton buttonType="RAISED" layoutX="35.0" layoutY="315.0" onAction="#btnEmployeeOnAction" prefHeight="43.0" prefWidth="179.0" text="   Employees">
+         <font>
+            <Font name="System Bold" size="19.0" />
+         </font>
+      </JFXButton>
+      <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="35.0" layoutY="317.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/id-card.png" />
+         </image>
+      </ImageView>
+      <JFXButton buttonType="RAISED" layoutX="35.0" layoutY="375.0" onAction="#btnProductOnAction" prefHeight="43.0" prefWidth="179.0" text="  Products">
+         <font>
+            <Font name="System Bold" size="19.0" />
+         </font>
+      </JFXButton>
+      <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="35.0" layoutY="377.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/box.png" />
+         </image>
+      </ImageView>
+      <JFXButton buttonType="RAISED" layoutX="35.0" layoutY="441.0" onAction="#btnStockOnAction" prefHeight="43.0" prefWidth="179.0" text="Stock">
+         <font>
+            <Font name="System Bold" size="19.0" />
+         </font>
+      </JFXButton>
+      <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="35.0" layoutY="443.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/warehouse.png" />
+         </image>
+      </ImageView>
+      <JFXButton buttonType="RAISED" layoutX="35.0" layoutY="505.0" onAction="#btnMachineOnAction" prefHeight="43.0" prefWidth="179.0" text="   Machines">
+         <font>
+            <Font name="System Bold" size="19.0" />
+         </font>
+      </JFXButton>
+      <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="35.0" layoutY="507.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/machine.png" />
+         </image>
+      </ImageView>
+      <JFXButton buttonType="RAISED" layoutX="35.0" layoutY="565.0" onAction="#btnReportOnAction" prefHeight="43.0" prefWidth="179.0" text="Reports">
+         <font>
+            <Font name="System Bold" size="19.0" />
+         </font>
+      </JFXButton>
+      <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="35.0" layoutY="567.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/report.png" />
+         </image>
+      </ImageView>
+      <Text layoutX="576.0" layoutY="58.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Product Manage">
+         <font>
+            <Font name="System Bold" size="28.0" />
+         </font>
+      </Text>
+      <TextField fx:id="txtProductId" layoutX="391.0" layoutY="170.0" prefHeight="40.0" prefWidth="200.0" />
+      <TextField fx:id="txtAmount" layoutX="712.0" layoutY="170.0" prefHeight="40.0" prefWidth="200.0" />
+      <TextField fx:id="txtDesc" layoutX="391.0" layoutY="325.0" prefHeight="40.0" prefWidth="200.0" />
+      <Label layoutX="391.0" layoutY="130.0" text="Product Id:">
+         <font>
+            <Font name="System Bold" size="19.0" />
+         </font>
+      </Label>
+      <Label layoutX="726.0" layoutY="130.0" prefHeight="24.0" prefWidth="171.0" text="TotalAmount:">
+         <font>
+            <Font name="System Bold" size="19.0" />
+         </font>
+      </Label>
+      <Label layoutX="387.0" layoutY="291.0" text="Description">
+         <font>
+            <Font name="System Bold" size="19.0" />
+         </font>
+      </Label>
+      <JFXButton buttonType="RAISED" layoutX="1030.0" layoutY="172.0" onAction="#btnProductSaveOnAction" style="-fx-background-color: green;" text="Save" textFill="#ebe2e2">
+         <font>
+            <Font name="System Bold" size="19.0" />
+         </font>
+         <effect>
+            <Shadow />
+         </effect>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="1030.0" layoutY="239.0" onAction="#btnProductUpdateOnAction" prefHeight="36.0" prefWidth="105.0" style="-fx-background-color: yellow;" text="Update" textFill="#2c2a2a">
+         <font>
+            <Font name="System Bold" size="19.0" />
+         </font>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="1030.0" layoutY="299.0" onAction="#btnClearOnAction" prefHeight="36.0" prefWidth="85.0" style="-fx-background-color: blue;" text="Clear" textFill="#eee0e0">
+         <font>
+            <Font name="System Bold" size="19.0" />
+         </font>
+      </JFXButton>
+      <JFXButton layoutX="1024.0" layoutY="359.0" onAction="#btnProductDeleteOnAction" style="-fx-background-color: red;" text="Delete" textFill="#eeeaea">
+         <font>
+            <Font name="System Bold" size="19.0" />
+         </font>
+      </JFXButton>
+      <JFXButton layoutX="595.0" layoutY="675.0" onAction="#btnOutputDetail" style="-fx-background-color: orange;" text="Output Details">
+         <font>
+            <Font name="System Bold" size="23.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>

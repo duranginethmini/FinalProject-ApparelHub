@@ -1,0 +1,124 @@
+Drop database if exists apparelHub;
+
+CREATE DATABASE apparelHub;
+
+USE apparelHub;
+
+CREATE TABLE user(
+userName VARCHAR (50),
+passWord VARCHAR(50)
+);
+
+CREATE TABLE buyer(
+B_id VARCHAR (10) PRIMARY KEY,
+name VARCHAR(50),
+address TEXT,
+telNum INT(20)
+);
+
+CREATE TABLE Payment(
+Pay_id VARCHAR (10) PRIMARY KEY,
+amount DOUBLE(7,2),
+status VARCHAR(20)
+);
+
+CREATE TABLE orders(
+orderId VARCHAR (10) PRIMARY KEY,
+B_id VARCHAR (10),
+Pay_id VARCHAR(10),
+price DOUBLE(10,2),
+Description VARCHAR(100),
+Qty INT (10),
+Date DATE,
+CONSTRAINT FOREIGN KEY(B_id) REFERENCES buyer (B_id) ON UPDATE CASCADE ON DELETE CASCADE,
+CONSTRAINT FOREIGN KEY(Pay_id) REFERENCES Payment (Pay_id) ON UPDATE CASCADE ON DELETE CASCADE
+);
+
+CREATE TABLE Stock(
+St_id VARCHAR (10) PRIMARY KEY,
+Type VARCHAR (50),
+Amount INT (15),
+Description VARCHAR(75)
+);
+
+CREATE TABLE Supplier(
+Sup_id VARCHAR (10) PRIMARY KEY,
+Name VARCHAR(20),
+Address TEXT,
+telNum INT(20)
+);
+
+CREATE TABLE StockSupplierDetail(
+SupplierLoadId varchar(20),
+St_id VARCHAR(10),
+Sup_id VARCHAR (10),
+SupplierQuantity int not null ,
+SupplierLoadTime TIME not null ,
+SupplierLoadDate  date not null ,
+SupplierLoadPrice decimal (8,2) not null ,
+constraint primary key (St_id,Sup_id,SupplierLoadId),
+CONSTRAINT FOREIGN KEY(St_id) REFERENCES Stock(St_id) ON UPDATE CASCADE ON DELETE CASCADE,
+CONSTRAINT FOREIGN KEY(Sup_id) REFERENCES Supplier(Sup_id) ON UPDATE CASCADE ON DELETE CASCADE
+);
+
+CREATE TABLE Employee(
+Emp_id VARCHAR(10) PRIMARY KEY,
+Name VARCHAR (50),
+Address TEXT,
+telNum INT(20)
+);
+
+CREATE TABLE Salary(
+Emp_id VARCHAR (10),
+Name VARCHAR(30),
+Amount DOUBLE(7,2),
+DATE date,
+CONSTRAINT FOREIGN KEY(Emp_id) REFERENCES Employee(Emp_id) ON UPDATE CASCADE ON DELETE CASCADE
+);
+
+CREATE TABLE Schedule(
+Sch_id VARCHAR (10) PRIMARY KEY,
+Emp_id VARCHAR (10),
+Name VARCHAR(20),
+Description VARCHAR (100),
+CONSTRAINT FOREIGN KEY(Emp_id) REFERENCES Employee(Emp_id) ON UPDATE CASCADE ON DELETE CASCADE
+);
+
+CREATE TABLE Product(
+Pr_id VARCHAR (10) PRIMARY KEY,
+TotalAmount INT(10),
+Description VARCHAR(50)
+);
+
+CREATE TABLE Output(
+Output_id VARCHAR (10) PRIMARY KEY,
+employee_id VARCHAR(20) ,
+product_id VARCHAR(20),
+Date DATE,
+Time TIME,
+qty INT (15),
+CONSTRAINT FOREIGN KEY(product_id) REFERENCES Product(Pr_id) ON UPDATE CASCADE ON DELETE CASCADE,
+CONSTRAINT FOREIGN KEY(employee_id) REFERENCES Employee(Emp_id) ON UPDATE CASCADE ON DELETE CASCADE
+);
+
+CREATE TABLE OutputStockDetail(
+Output_id VARCHAR (10) ,
+stock_id varchar(10),
+qty INT (15),
+CONSTRAINT FOREIGN KEY(stock_id) REFERENCES Stock(St_id) ON UPDATE CASCADE ON DELETE CASCADE,
+CONSTRAINT FOREIGN KEY(Output_id) REFERENCES Output(Output_id) ON UPDATE CASCADE ON DELETE CASCADE
+);
+
+
+CREATE TABLE ScheduleOutputDetail(
+Sch_id VARCHAR (10) ,
+Output_id VARCHAR(10),
+CONSTRAINT FOREIGN KEY(Sch_id) REFERENCES Schedule(Sch_id) ON UPDATE CASCADE ON DELETE CASCADE,
+CONSTRAINT FOREIGN KEY(Output_id) REFERENCES Output (Output_id) ON UPDATE CASCADE ON DELETE CASCADE
+);
+
+CREATE TABLE Machine(
+M_id VARCHAR(10) PRIMARY KEY,
+Type VARCHAR(20),
+Cost DOUBLE (7,2)
+);

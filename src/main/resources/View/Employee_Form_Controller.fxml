@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="root" opacity="0.87" prefHeight="799.0" prefWidth="1248.0" style="-fx-background-color: #957DDC;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.apparelHub.Controller.EmployeeFormController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#957ddc" height="772.0" layoutX="24.0" layoutY="6.0" opacity="0.27" stroke="#f5f0f0" strokeType="INSIDE" width="200.0">
+         <effect>
+            <InnerShadow />
+         </effect>
+      </Rectangle>
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="24.0" layoutY="24.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/logoimage.png" />
+         </image>
+      </ImageView>
+      <JFXButton fx:id="dashBoard" buttonType="RAISED" layoutX="35.0" layoutY="147.0" onAction="#btnDashBoardOnAction" prefHeight="43.0" prefWidth="179.0" text="   Dashboard">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </JFXButton>
+      <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="24.0" layoutY="149.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/dashboard.png" />
+         </image>
+      </ImageView>
+      <JFXButton buttonType="RAISED" layoutX="24.0" layoutY="210.0" onAction="#btnOrderOnAction" prefHeight="43.0" prefWidth="179.0" text="Order">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </JFXButton>
+      <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="24.0" layoutY="212.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/shopping-bag.png" />
+         </image>
+      </ImageView>
+      <JFXButton buttonType="RAISED" layoutX="24.0" layoutY="273.0" onAction="#btnCustomerOnAction" prefHeight="43.0" prefWidth="179.0" text="      Customers">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </JFXButton>
+      <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="24.0" layoutY="275.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/customer.png" />
+         </image>
+      </ImageView>
+      <JFXButton buttonType="RAISED" layoutX="24.0" layoutY="336.0" onAction="#btnEmployeeOnAction" prefHeight="43.0" prefWidth="179.0" text="      Employees">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </JFXButton>
+      <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="24.0" layoutY="338.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/id-card.png" />
+         </image>
+      </ImageView>
+      <JFXButton buttonType="RAISED" layoutX="24.0" layoutY="395.0" onAction="#btnProductOnAction" prefHeight="43.0" prefWidth="179.0" text="    Products">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </JFXButton>
+      <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="24.0" layoutY="397.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/box.png" />
+         </image>
+      </ImageView>
+      <JFXButton buttonType="RAISED" layoutX="24.0" layoutY="459.0" onAction="#btnStockOnAction" prefHeight="43.0" prefWidth="179.0" text="Stock">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </JFXButton>
+      <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="24.0" layoutY="461.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/warehouse.png" />
+         </image>
+      </ImageView>
+      <JFXButton buttonType="RAISED" layoutX="24.0" layoutY="515.0" onAction="#btnMachineOnAction" prefHeight="43.0" prefWidth="179.0" text="      Machines">
+         <font>
+            <Font name="System Bold" size="19.0" />
+         </font>
+      </JFXButton>
+      <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="24.0" layoutY="518.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/machine.png" />
+         </image>
+      </ImageView>
+      <JFXButton buttonType="RAISED" layoutX="35.0" layoutY="582.0" onAction="#btnReportOnAction" prefHeight="43.0" prefWidth="179.0" text="Reports">
+         <font>
+            <Font name="System Bold" size="19.0" />
+         </font>
+      </JFXButton>
+      <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="24.0" layoutY="584.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/report.png" />
+         </image>
+      </ImageView>
+      <Pane layoutX="263.0" layoutY="157.0" prefHeight="471.0" prefWidth="200.0" style="-fx-background-color: white;">
+         <effect>
+            <InnerShadow />
+         </effect>
+         <children>
+            <JFXButton buttonType="RAISED" layoutX="4.0" layoutY="282.0" onAction="#EmployeeDetailOnAction" prefHeight="113.0" prefWidth="192.0" text="Employee Detail">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font></JFXButton>
+            <ImageView fitHeight="206.0" fitWidth="186.0" layoutX="7.0" layoutY="76.0" pickOnBounds="true" smooth="false">
+               <image>
+                  <Image url="@../assets/human.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <Pane layoutX="909.0" layoutY="160.0" prefHeight="471.0" prefWidth="200.0" style="-fx-background-color: white;">
+         <effect>
+            <InnerShadow />
+         </effect>
+         <children>
+            <JFXButton buttonType="RAISED" layoutX="3.0" layoutY="307.0" onAction="#ScheduleFormOnAction" prefHeight="92.0" prefWidth="200.0" text="Schedule">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font></JFXButton>
+            <ImageView fitHeight="199.0" fitWidth="167.0" layoutX="19.0" layoutY="108.0" pickOnBounds="true" smooth="false">
+               <image>
+                  <Image url="@../assets/timetable.png" />
+               </image>
+            </ImageView>
+         </children></Pane>
+      <Pane layoutX="590.0" layoutY="157.0" prefHeight="471.0" prefWidth="200.0" style="-fx-background-color: white;">
+         <effect>
+            <InnerShadow />
+         </effect>
+         <children>
+            <JFXButton buttonType="RAISED" layoutY="301.0" onAction="#EmployeeSalaryOnAction" prefHeight="92.0" prefWidth="200.0" text="Salary ">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font></JFXButton>
+            <ImageView fitHeight="199.0" fitWidth="150.0" layoutX="25.0" layoutY="94.0" pickOnBounds="true" smooth="false">
+               <image>
+                  <Image url="@../assets/salary.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
